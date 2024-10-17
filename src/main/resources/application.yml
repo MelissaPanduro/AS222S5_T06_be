@@ -8,12 +8,12 @@ spring:
     url: postgresql://ep-dry-feather-a50464ji.us-east-2.aws.neon.tech:5432/jose?sslmode=require
     username: JG-ChatBot_owner
     password: Qbr4YsUfdz6R
-    url: ${DATABASE_URL}
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
+    #url: ${DATABASE_URL}
+    #username: ${DATABASE_USERNAME}
+    #password: ${DATABASE_PASSWORD}
   contentmoderator:
     apikey: ba8653abc2mshd8ced1fcbfe3b6dp1ac8e6jsn2f87dde7ca7b
-    apikey: ${API_KEY} 
+    #apikey: ${API_KEY} 
 
 #spring:
  # application:
