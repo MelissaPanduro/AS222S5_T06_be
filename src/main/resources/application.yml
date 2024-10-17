@@ -3,18 +3,32 @@ server:
 
 spring:
   application:
-    name: jose
+    name: ms_content_moderator
   r2dbc:
-    url: r2dbc:postgresql://ep-dry-feather-a50464ji.us-east-2.aws.neon.tech:5432/jose?sslmode=require
+    url: postgresql://ep-dry-feather-a50464ji.us-east-2.aws.neon.tech:5432/jose?sslmode=require
     username: JG-ChatBot_owner
     password: Qbr4YsUfdz6R
-  show-sql: true
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
   contentmoderator:
     apikey: ba8653abc2mshd8ced1fcbfe3b6dp1ac8e6jsn2f87dde7ca7b
+    apikey: ${API_KEY} 
 
-# Configuración del servicio cognitivo
-api:
-  chatgpt:
-    url: https://chatgpt-ai-chat-bot.p.rapidapi.com/ask
-    key: ba8653abc2mshd8ced1fcbfe3b6dp1ac8e6jsn2f87dde7ca7b
-    host: chatgpt-ai-chat-bot.p.rapidapi.com
+#spring:
+ # application:
+  #  name: chatgpt
+  #r2dbc:
+   # url: r2dbc:postgresql://ep-dry-feather-a50464ji.us-east-2.aws.neon.tech:5432/jose?sslmode=require
+    #username: JG-ChatBot_owner
+    #password: Qbr4YsUfdz6R
+  #show-sql: true
+  #contentmoderator:
+   # apikey: ba8653abc2mshd8ced1fcbfe3b6dp1ac8e6jsn2f87dde7ca7b
+
+#Configuración del servicio cognitivo
+#api:
+ # chatgpt:
+ #   url: https://chatgpt-ai-chat-bot.p.rapidapi.com/ask
+  #  key: ba8653abc2mshd8ced1fcbfe3b6dp1ac8e6jsn2f87dde7ca7b
+   # host: chatgpt-ai-chat-bot.p.rapidapi.com
