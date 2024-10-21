@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
       run: mvn clean package
 
     - name: Build Docker image
-      run: docker build -t your-dockerhub-username/chatbot_docker .
+      run: docker build -t melissapanduro/chatbot_docker .
 
     - name: Log in to DockerHub
       run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
